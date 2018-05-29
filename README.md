@@ -15,8 +15,8 @@ Before starting with project, please headover to [CRA](https://github.com/facebo
 ### Supported Integrations
 
 - [React js - ^16.4.0](https://facebook.github.io/react/)
-- [Redux js - ^3.7.2](http://redux.js.org/)
-- [react-router - ^4.1.2](https://github.com/ReactTraining/react-router)
+- [Redux js - ^4.0.0-rc.1](http://redux.js.org/)
+- [react-router-dom - ^4.2.2](https://github.com/ReactTraining/react-router)
 - [react-redux - ^5.0.7](https://github.com/reactjs/react-redux)
 - [react-router-dom - ^4.2.2](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 - [react-router-redux - ^5.0.0-alpha.9](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux)
