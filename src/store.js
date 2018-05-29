@@ -20,6 +20,10 @@ const epicMiddleware = createEpicMiddleware(rootEpic, {
 // Build the middleware for intercepting and dispatching navigation actions
 const appRouterMiddleware = routerMiddleware(history);
 
-const store = createStore(rootReducer, applyMiddleware(epicMiddleware), applyMiddleware(appRouterMiddleware));
+const store = createStore(
+	rootReducer,
+	applyMiddleware(epicMiddleware),
+	applyMiddleware(appRouterMiddleware)
+);
 
 export default store;

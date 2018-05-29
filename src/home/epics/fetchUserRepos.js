@@ -1,31 +1,24 @@
 import { ajax } from 'rxjs/observable/dom/ajax';
-import 'rxjs/add/operator/catch'
-import { Observable } from 'rxjs/Observable';
+import { ofType } from 'redux-observable';
+import { catchError, mergeMap, map } from 'rxjs/operators';
 
-import {
-	REQUEST_USER_REPOS_START,
-  REQUEST_USER_REPOS_FAILED
-}  from '../actions/actionTypes';
+import { REQUEST_USER_REPOS_START } from '../actions/actionTypes';
 
-import {
-	doUserReposFulfilled
-} from '../actions/doUserRepos';
+import { doUserReposFulfilled, doUserReposFailed } from '../actions/doUserRepos';
 
-
-// epic
-const fetchUserRepos = action$ => {
-
-	return action$.ofType(REQUEST_USER_REPOS_START)
-	.mergeMap(action =>
-		ajax.getJSON(`https://api.github.com/users/${action.payload}/repos`)
-	  .map(response => doUserReposFulfilled(response))
-	  .catch(error => Observable.of({
-    	type: REQUEST_USER_REPOS_FAILED,
-    	payload: error.xhr.response,
-    	error: true
-    }))
+// Also now using v6 pipe operators
+const fetchUserRepos = (action$, state$) =>
+	action$.pipe(
+		ofType(REQUEST_USER_REPOS_START),
+		mergeMap(action => {
+			let apiUrl = `https://api.github.com/users/${action.payload}/repos`;
+			return ajax
+				.getJSON(apiUrl)
+				.pipe(
+					map(response => doUserReposFulfilled(response)),
+					catchError(error => doUserReposFailed(error.xhr.response))
+				);
+		})
 	);
-
-}
 
 export default fetchUserRepos;

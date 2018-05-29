@@ -1,12 +1,10 @@
 # cra-boilerplate
 
 
-This project is an [Create React App - v1.1.1](https://github.com/facebookincubator/create-react-app) boilerplate
+This project is an [Create React App - v1.1.4](https://github.com/facebookincubator/create-react-app) boilerplate
 with integration of Redux, React Router, Redux observable & Reactstrap(Bootstrap v4) and Scss for quick start enterprise level applications.
 
 [![Build Status](https://travis-ci.org/mohandere/cra-boilerplate.svg?branch=master)](https://travis-ci.org/mohandere/cra-boilerplate) [![npm](https://img.shields.io/npm/v/npm.svg)]() [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]() [![Dependency Status](https://dependencyci.com/github/mohandere/cra-boilerplate/badge)](https://dependencyci.com/github/mohandere/cra-boilerplate)
-
-<!-- <img src="https://raw.githubusercontent.com/mohandere/cra-boilerplate/master/screenshot.png" width="600"> -->
 
 ### [Demo](https://mohandere.github.io/cra-boilerplate/#/)
 
@@ -16,15 +14,16 @@ Before starting with project, please headover to [CRA](https://github.com/facebo
 
 ### Supported Integrations
 
-- [React js - ^16.2.0](https://facebook.github.io/react/)
+- [React js - ^16.4.0](https://facebook.github.io/react/)
 - [Redux js - ^3.7.2](http://redux.js.org/)
 - [react-router - ^4.1.2](https://github.com/ReactTraining/react-router)
-- [react-redux - ^5.0.6](https://github.com/reactjs/react-redux)
+- [react-redux - ^5.0.7](https://github.com/reactjs/react-redux)
 - [react-router-dom - ^4.2.2](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
-- [react-router-redux - ^5.0.0-alpha.6](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux)
-- [redux-observable - ^0.18.0](https://redux-observable.js.org)
+- [react-router-redux - ^5.0.0-alpha.9](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux)
+- [redux-observable - ^1.0.0-alpha.2](https://redux-observable.js.org)
+- [Rxjs - Rxjs v6](https://github.com/ReactiveX/rxjs)
 - [reactstrap - Easy to use React Bootstrap 4 components](https://reactstrap.github.io/)
-- [react-loadable](https://github.com/jamiebuilds/react-loadable)
+- [react-loadable - 5.4.0](https://github.com/jamiebuilds/react-loadable)
 
 
 #### Features
