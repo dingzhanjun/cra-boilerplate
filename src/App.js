@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'react-router-redux';
-import store, { history } from './store';
+import { ConnectedRouter } from 'connected-react-router'
+import store, { history } from './configureStore';
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
+import './App.scss';
 
 // routes
 import routes from './routes';

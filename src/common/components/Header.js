@@ -31,8 +31,8 @@ class Header extends Component {
 		return (
 	    <header>
 	    	<Container>
-					<Navbar color="faded" light expand="md">
-	          <NavbarBrand href="/">reactstrap</NavbarBrand>
+					<Navbar color="faded" expand="md">
+	          <NavbarBrand href="/">CRA Boilerplate</NavbarBrand>
 	          <NavbarToggler onClick={this.toggle} />
 	          <Collapse isOpen={this.state.isOpen} navbar>
 	            <Nav className="ml-auto" navbar>

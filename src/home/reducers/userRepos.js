@@ -1,7 +1,7 @@
 import {
-  REQUEST_USER_REPOS_START,
-  REQUEST_USER_REPOS_SUCCESS,
-  REQUEST_USER_REPOS_FAILED
+  ITEMS_IS_LOADING,
+  ITEMS_FETCH_DATA_SUCCESS,
+  ITEMS_HAS_ERRORED
 } from '../actions/actionTypes';
 
 let initialState = {
@@ -9,24 +9,25 @@ let initialState = {
   isLoading: false,
   errors: []
 };
-function applyUserRepos(state = initialState, action) {
+
+function userRepos(state = initialState, action) {
 
   switch (action.type) {
-    case REQUEST_USER_REPOS_START:
+    case ITEMS_IS_LOADING:
       return Object.assign({}, state, {
         isLoading: true
       });
 
-    case REQUEST_USER_REPOS_FAILED:
+    case ITEMS_HAS_ERRORED:
       return Object.assign({}, state, {
         isLoading: false,
-        errors: action.payload
+        errors: action.errors
       });
 
-    case REQUEST_USER_REPOS_SUCCESS:
+    case ITEMS_FETCH_DATA_SUCCESS:
       return Object.assign({}, state, {
         isLoading: false,
-        repos: action.payload
+        repos: action.repos
       });
 
     default:
@@ -34,4 +35,4 @@ function applyUserRepos(state = initialState, action) {
   }
 }
 
-export default applyUserRepos;
+export default userRepos;

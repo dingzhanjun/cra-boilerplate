@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Repo from '../components/Repo';
-import {
-	doUserRepos
-} from '../actions/doUserRepos';
+import getUserRepos from '../thunks/getUserRepos';
+
 import { bindActionCreators } from 'redux'
 
 class UserRepos extends Component {
 
 	componentDidMount() {
 		let username = 'mohandere';
-		this.props.doUserRepos(username);
+		this.props.getUserRepos(username);
 	}
 
 	render() {
-		let { repos } = this.props;
 		let pageContent = ''
+		let { repos } = this.props;
 
 		if (this.props.loading) {
       pageContent = (
@@ -46,7 +45,7 @@ UserRepos.propTypes = {
 	repos: PropTypes.array
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
 	return {
 		repos: state.home.userRepos.repos,
 		loading: state.home.userRepos.isLoading
@@ -55,7 +54,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators({
-		doUserRepos
+		getUserRepos,
 	}, dispatch)
 };
 

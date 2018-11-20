@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import UserRepos from './containers/UserRepos';
-import './style.css';
+import './style.scss';
 
 class Home extends Component {
 	render() {
