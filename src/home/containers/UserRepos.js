@@ -15,9 +15,9 @@ class UserRepos extends Component {
 
 	render() {
 		let pageContent = ''
-		let { repos } = this.props;
+		let { repos, isLoading } = this.props;
 
-		if (this.props.loading) {
+		if (isLoading) {
       pageContent = (
         <div className="userReposLoader">
           Loading...
@@ -48,7 +48,7 @@ UserRepos.propTypes = {
 const mapStateToProps = (state) => {
 	return {
 		repos: state.home.userRepos.repos,
-		loading: state.home.userRepos.isLoading
+		isLoading: state.home.userRepos.isLoading
 	};
 };
 

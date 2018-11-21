@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-// Import modules/routes
+// Configure routes
 import Home from './home';
 import About from './about';
 import PageNotFound from './common/components/PageNotFound';
